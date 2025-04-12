@@ -19,7 +19,7 @@ urls:
     post:
       path: /create_user?name=X
       options:
-        Name: user name
+        name: user name
       summary: create user
       responses:
         '202':
