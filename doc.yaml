@@ -1,0 +1,30 @@
+info:
+  title: title
+  description: documentation for api
+  version: 1.0
+
+server: http://localhost:8080
+
+urls:
+  /main:
+    get:
+      path: /main
+      summary: description
+      responses:
+        '200':
+          description: success
+          content: text/plain
+        'Internal Server Error (500)': server error
+  /create_user:
+    post:
+      path: /create_user?name=X
+      options:
+        Name: user name
+      summary: create user
+      responses:
+        '202':
+          description: success
+          content: application/json
+        'Internal Server Error':
+          description: server error
+          content: text/plain
